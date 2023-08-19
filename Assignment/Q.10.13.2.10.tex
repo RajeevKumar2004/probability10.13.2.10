@@ -213,10 +213,32 @@
 I toss three coins together. The possible outcomes are no heads, 1 heads, 2 heads and 3 heads. So, Isay that probability of no heads is 1/4. What's wrong with this conclusion
 
 \solution\\
-Given, three coins are tossed together.\\
-Total outcomes T\brak{E}$=2^{3}=8$\\
-\brak{T,T,T}, \brak{T,T,H}, \brak{T,H,T}, \brak{T,H,H}, \brak{H,T,T}, \brak{H,T,H}, \brak{H,H,T} and \brak{H,H,H} are the favourable outcomes for this event.\\
-$\therefore\pr{getting\, no \,heads}=\frac{1}{8}$\\
-Hence, the given statement is wrong $\brak{\because \frac{1}{8}\neq\frac{1}{4}}$
+Let, $p_X{\brak{X_i}}$ be the sequence of independent Bernoulli random varibles. 
+\begin{align}
+X_i &= 
+  \begin{cases}
+  1, & \text{coin toss result in a Heads}\\
+  0, & \text{result in Tails}
+  \end{cases}
+\end{align}
+which means
+\begin{align}
+p_X{\brak{X_i=1}} = 0.5\\
+p_X{\brak{X_i=0}} = 0.5
+\end{align}
+To find the probability of getting no head after tossing coin three times, we use binomial distribution formula:
+\begin{align}
+p_X{\brak{Z=k}}&=\comb{n}{k}\times q^{n-k}\times p^{k}
+\end{align}
+So,
+\begin{align}
+p_X{\brak{Z=0}}&=\comb{3}{0}\times \brak{\frac{1}{2}}^{\brak{3-0}}\times \brak{\frac{1}{2}}^{0}\\
+&=\frac{3!}{\brak{3-0}!\times 0!}\times \frac{1}{2}^{3}\\
+&=\frac{3!}{3!\times 1}\times \frac{1}{8}\\
+&=\frac{1}{8}\\
+\therefore p_x{\brak{getting\, no\, heads}}&=\frac{1}{8}
+\end{align}
+Hence, the given statement is wrong$\brak{\because \frac{1}{8}\neq\frac{1}{4}}$
+
 \end{document}
 
