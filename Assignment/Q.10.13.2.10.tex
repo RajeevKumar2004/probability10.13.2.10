@@ -228,21 +228,20 @@ q=p_X{\brak{X_i=0}} = 0.5
 \end{align}
 For number of trials be n and the pmf of getting k heads is given by:
 \begin{align}
-p_X\brak{k}&= \comb{n}{k}\times\brak{p}^k\times\brak{q}^{n-k}\\
-&= \comb{n}{k}\times\brak{0.5}^k\times\brak{0.5}^{n-k}
+p_X\brak{k}&= \comb{n}{k}\brak{p}^k\brak{q}^{n-k}\\
+&= \comb{n}{k}\brak{0.5}^k\brak{0.5}^{n-k}
 \end{align}  
 The cdf for pmf of n no. of trails id given by:
 \begin{align}
-F_X(k) &= p_X(0)+p_X(1)+ ... +p_X(k)\\
-&= \comb{n}{0}\brak{0.5}^n\brak{0.5}^0+...+\comb{n}{k}\brak{0.5}^{n-k}\brak{0.5}^k
+F_X(k) &=\sum_{i=0}^{k} p_X(0)\\
+&=\sum_{k=0}^{n}\comb{n}{k}\brak{0.5}^{n-k}\brak{0.5}^k
 \end{align}
 Then cmf of getting no head after three toss is given by :
 \begin{align}
 F_X\brak{0}=p_X\brak{0}&=\comb{3}{0}\times \brak{\frac{1}{2}}^{3} \times \brak{\frac{1}{2}}^{0}\\
 &=\frac{3!}{\brak{3-0}!\times 0!}\times \frac{1}{2}^{3}\\
 &=\frac{3!}{3!\times 1}\times \frac{1}{8}\\
-&=\frac{1}{8}\\
-\therefore p_x{\brak{getting\, no\, heads}}&=\frac{1}{8}
+&=\frac{1}{8}
 \end{align}
 Hence, the given statement is wrong$\brak{\because \frac{1}{8}\neq\frac{1}{4}}$
 
